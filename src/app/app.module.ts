@@ -12,7 +12,11 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { UserService } from './user/services/user.service';
 import { CartService } from './products/cart/services/cart.service';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
-
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,10 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [UserService, CartService],
   bootstrap: [AppComponent]
