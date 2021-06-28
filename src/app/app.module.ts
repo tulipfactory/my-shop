@@ -14,7 +14,7 @@ import { CartService } from './products/cart/services/cart.service';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore'; 
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {HttpClientModule} from '@angular/common/http';
 @NgModule({
