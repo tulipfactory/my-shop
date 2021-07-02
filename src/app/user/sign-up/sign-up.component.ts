@@ -9,7 +9,7 @@ import { UserService } from '../services/user.service';
 export class SignUpComponent implements OnInit {
 
 name = "";
-number = "";
+phone = "";
 password= "";
 email = "";
 
@@ -19,6 +19,6 @@ email = "";
   }
   signUp(){
     this.service.signUp
-    (this.email, this.password)
+    (this.email, this.password, this.name, this.phone)
   }
 }

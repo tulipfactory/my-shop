@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { CartService } from './cart/services/cart.service';
 //import observable and firestore to fetch data from database
 @Component({
   selector: 'app-products',
@@ -13,11 +14,17 @@ export class ProductsComponent implements OnInit {
   //data will be returned as an observable, which is why we need
   //to create an observable "items: Observable<any[]>"
   //its datatype is 'any' so that it can have any sort of data
-  constructor(db: AngularFirestore) { 
+  constructor(db: AngularFirestore, private service: CartService) { 
     this.items = db.collection('items').valueChanges();
+    
+    
   }
 //we enter this code in the constructor so that the data is
 //executed upon component creation
+  addToCart(item:any){
+  //this allows the addtocart function to accept the item in the click 
+  this.service.addToCart(item)
+  }
 
   ngOnInit(): void {
   }

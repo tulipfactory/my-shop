@@ -5,5 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
 
-  constructor() { }
-}
+  constructor() {}
+
+    cart:any[] = []
+   
+
+    
+    addToCart(product:any){
+      this.cart.push(product) 
+     //this adds the product to the array
+    }
+  }
