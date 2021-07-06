@@ -1,13 +1,14 @@
 <div class="row">
-  <h1>{{items.length}} items in cart</h1>
   <a class="nav-link" routerLink="/products"
   routerLinkActive="active">Back To Products</a>
+  <h1>{{items.length}} items in cart</h1>
+ 
     <div class="card col" style="width: 18rem;" *ngFor = "let item of items">
       <img class="card-img-top" src="{{item.img}}">
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">{{item.price}}</p>
-        <a href="#" class="btn btn-danger">Delete</a>
+        <p class="card-text">${{item.price}}</p>
+        <a class="btn btn-danger" (click)="removeFromCart(item)">Delete</a>
       </div>
     </div>
 
@@ -17,5 +18,6 @@
       <div class="form-check">
         <h3>Total amount: </h3> <h3>${{total}}</h3>
       </div>
-      <button type="submit" class="btn btn-primary">Checkout</button>
+      <button type="submit" class="btn btn-primary" routerLink="/checkout"
+      routerLinkActive="active">Checkout</button>
     </form>

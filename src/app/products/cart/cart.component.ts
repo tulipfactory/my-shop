@@ -21,5 +21,8 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+removeFromCart(product: any){
+  this.service.removeFromCart(product) //this is how i use the service in the component
+  this.total -= product.price
+}
 }
