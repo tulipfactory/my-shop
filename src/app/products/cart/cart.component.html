@@ -1,6 +1,9 @@
 <div class="row">
+  <h1>{{items.length}} items in cart</h1>
+  <a class="nav-link" routerLink="/products"
+  routerLinkActive="active">Back To Products</a>
     <div class="card col" style="width: 18rem;" *ngFor = "let item of items">
-      <img class="card-img-top" src="{{item.image}}">
+      <img class="card-img-top" src="{{item.img}}">
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.price}}</p>
@@ -12,7 +15,7 @@
 <form>
       
       <div class="form-check">
-        <h3>Total amount: </h3>
+        <h3>Total amount: </h3> <h3>${{total}}</h3>
       </div>
       <button type="submit" class="btn btn-primary">Checkout</button>
     </form>

@@ -10,9 +10,10 @@ export class CartService {
     cart:any[] = []
    
 
-    
+   
     addToCart(product:any){
       this.cart.push(product) 
+      console.log(this.cart)
      //this adds the product to the array
     }
   }
