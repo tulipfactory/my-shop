@@ -1,0 +1,23 @@
+.card-img-top {
+ 
+    padding-top: 23px; 
+    padding-bottom: 10px; 
+    max-height: 260px;
+   }
+    
+.card-body {
+    background-color: white;
+    max-height: 200px;
+    text-align: center;
+}
+.col {
+   background-color: white;
+   border-radius: 15px;
+   padding-bottom: 3px;
+   top: 70px;
+
+
+}
+.events{
+    margin: 20px 10px;
+    }

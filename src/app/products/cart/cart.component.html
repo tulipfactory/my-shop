@@ -1,15 +1,16 @@
+<a class="nav-link" routerLink="/products"
+routerLinkActive="active">Back To Products</a>
 <div class="row">
-  <a class="nav-link" routerLink="/products"
-  routerLinkActive="active">Back To Products</a>
-  <h1>{{items.length}} items in cart</h1>
  
-    <div class="card col" style="width: 18rem;" *ngFor = "let item of items">
-      <img class="card-img-top" src="{{item.img}}">
+    <div class="card col" *ngFor = "let item of items">
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">${{item.price}}</p>
         <a class="btn btn-danger" (click)="removeFromCart(item)">Delete</a>
       </div>
+     
+    
+     
     </div>
 
   </div>

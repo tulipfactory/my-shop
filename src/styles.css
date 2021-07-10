@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.bg-light {
+    background-color: rgba(122, 98, 131, 0.781) !important;
+    height: 32px;
+}
+.navbar-light {
+    color: black;
+}
+body {
+    background-color: rgb(241, 241, 241);
+}
