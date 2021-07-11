@@ -1,7 +1,4 @@
-
-
-    .col {
-       max-width: 340px;
-       max-height: 200px;
-       text-align: center;
-    }
+.nav-link2 {
+    color: purple;
+    left: 40px;
+}

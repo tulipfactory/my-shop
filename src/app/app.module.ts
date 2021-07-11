@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CheckoutComponent } from './checkout/checkout.component';
+
 @NgModule({
   declarations: [
     AppComponent,

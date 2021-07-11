@@ -8,6 +8,7 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 
+
 const routes: Routes = [
   { path: '', component: SignInComponent}, //when there is an empty string this is the default page
          { path: 'signin', component: SignInComponent},
